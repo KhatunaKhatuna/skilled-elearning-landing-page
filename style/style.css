@@ -11,6 +11,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
+  overflow: hidden;
 }
 
 .button {
@@ -29,10 +30,6 @@ body {
 /* __________Header mobile version_______ */
 
 .header {
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; */
   height: 80px;
   margin-bottom: 22px;
 }
@@ -50,18 +47,15 @@ body {
   width: 89px;
   height: auto;
 }
-/* __________Header desktop version_______ */
 
-@media (min-width: 1024px) {
-}
-
-/* __________Content Section_______ */
+/* __________Content mobile version_______ */
 .content {
   flex: 1 1 auto;
   min-width: 320px;
   max-width: 1440px;
   margin: 0 auto;
 }
+
 .herro {
   padding: 0 16px;
 }
@@ -82,6 +76,12 @@ body {
 }
 .herro-image {
   width: 100%;
+}
+.herro-image-tablet {
+  display: none;
+}
+.herro-image-desktop {
+  display: none;
 }
 .info {
   padding: 0 16px 80px;
@@ -129,7 +129,7 @@ body {
   line-height: 28px;
   text-transform: capitalize;
 }
-/* __________Footer Section_______ */
+/* __________Footer mobile version_______ */
 
 .footer {
   background-color: #13183f;
@@ -144,3 +144,86 @@ body {
 .button-purple {
   background: linear-gradient(#4851ff, #f02aa6);
 }
+
+@media (min-width: 768px) {
+  .header {
+    height: 96px;
+    margin-bottom: 75px;
+    z-index: 2;
+  }
+  .header__row {
+    padding: 24px 39px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .herro {
+    padding: 0 39px;
+  }
+  .herro-row {
+    position: relative;
+  }
+  .herro-textContent {
+    width: 52vw;
+    max-width: 450px;
+    margin-bottom: 170px;
+  }
+  .button-pink {
+    padding: 5px 15px;
+  }
+  .herro-image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(335px, -230px);
+  }
+  .herro-image-mobile {
+    display: none;
+  }
+  .herro-image-tablet {
+    display: block;
+    width: 100%;
+  }
+
+  .info {
+    padding: 0 39px 86px;
+  }
+  .info-row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 56px;
+  }
+
+  .info-item {
+    width: 49.27%;
+    margin-bottom: 0;
+    padding: 0 21px 32px 32px;
+  }
+  .info-item:first-child {
+    padding: 56px 21px 32px 32px;
+  }
+}
+
+/* @media (min-width: 1440px) {
+  .info {
+    padding: 0 165px 140px;
+  }
+  .info-row {
+    column-gap: 30px;
+    row-gap: 80px;
+  }
+  .info-item {
+    width: 350px;
+  }
+  .info-icon {
+    margin-bottom: 32px;
+  }
+  .info-item:first-child {
+    padding: 64px 32px 32px;
+  }
+  .info-text {
+    margin-bottom: 40px;
+  }
+} */
