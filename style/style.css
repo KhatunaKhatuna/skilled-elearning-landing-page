@@ -60,6 +60,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding-top: 22px;
+  background: linear-gradient(#ffffff 30%, #f0f1ff);
 }
 
 .herro {
@@ -96,7 +97,7 @@ body {
 }
 .info {
   padding: 0 16px 80px;
-  background: linear-gradient(#ffffff, #f0f1ff);
+
   height: 100%;
 }
 
@@ -321,6 +322,9 @@ body {
     margin-bottom: 24px;
     font-size: 18px;
     line-height: 28px;
+  }
+  .footer__row {
+    padding: 36px 165px;
   }
   .button-purple:hover {
   }
