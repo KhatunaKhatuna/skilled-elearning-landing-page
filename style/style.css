@@ -166,7 +166,7 @@ body {
   align-items: center;
 }
 .button-purple {
-  background: linear-gradient(#4851ff, #f02aa6);
+  background: linear-gradient(#4851ff 0%, #f02aa6 100%);
 }
 
 @media (min-width: 768px) {
@@ -326,6 +326,20 @@ body {
   .footer__row {
     padding: 36px 165px;
   }
-  .button-purple:hover {
+
+  .button-purple {
+    position: relative;
+    overflow: hidden;
+  }
+  .button-purple:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
   }
 }
